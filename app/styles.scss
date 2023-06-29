@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$border-radius: 20px;
+$box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+
+body {
+   font-family: 'Open Sans', sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+.hero-layout {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   padding: 20px;
+   box-sizing: border-box;
+}
+
+.cards-container {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   flex-wrap: wrap;
+}
+
+.card {
+   position: relative;
+   width: 100%;
+   /* Adjust as needed for smaller screen sizes */
+   max-width: 400px;
+   /* Adjust as needed for larger screen sizes */
+   background-color: #fff;
+   border-radius: $border-radius;
+   box-shadow: $box-shadow;
+   overflow: hidden;
+   padding-bottom: 60px;
+   /* Adjust the padding to make space for the button */
+
+}
+
+.card-image {
+   width: 100%;
+   height: auto;
+}
+
+.card-header {
+   font-size: 30px;
+   font-weight: bold;
+   padding: 20px;
+   margin: 0;
+   text-align: left;
+   background-color: none;
+   color: black;
+}
+
+.card-body {
+   padding: 20px;
+   text-align: justify;
+   color: black;
+}
+
+.button {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   display: flex;
+   justify-content: center;
+   width: 90%;
+   padding: 10px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   background-color: $primary-color;
+   border: none;
+   border-radius: $border-radius;
+   color: #fff;
+   font-weight: bold;
+   cursor: pointer;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.button:hover {
+   background-color: $secondary-color;
+}
+
+.card.selected {
+   border: 10px solid $primary-color;
+}
+
+/* Responsive modifications */
+@media (max-width: 768px) {
+   .card {
+      width: 100%;
+      max-width: 100%;
+   }
+}
